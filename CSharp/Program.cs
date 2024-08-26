@@ -4,18 +4,29 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            
-            Console.WriteLine("-----------------------------------------------------------");
-            Strings strings = new Strings();
-            strings.PrintStrings();
-            strings.ManipulationStringArrays();
-            strings.FormatStrings();
-            
-            Console.WriteLine("-----------------------------------------------------------");
-            DateTimes dateTimes = new DateTimes();
-            dateTimes.PrintDateTimes();
-            dateTimes.FormatDateTimes();
+            //Console.WriteLine("Hello, World!");
+
+            //Console.WriteLine("-----------------------------------------------------------");
+            //Strings strings = new Strings();
+            //strings.PrintStrings();
+            //strings.ManipulationStringArrays();
+            //strings.FormatStrings();
+
+            //Console.WriteLine("-----------------------------------------------------------");
+            //DateTimes dateTimes = new DateTimes();
+            //dateTimes.PrintDateTimes();
+            //dateTimes.FormatDateTimes();
+
+            int age = 35;
+            Console.WriteLine(age);
+
+            Console.WriteLine(++age);
+            Console.WriteLine(age++);
+            Console.WriteLine(age);
+
+            Console.WriteLine(--age);
+            Console.WriteLine(age--);
+            Console.WriteLine(age);
         }
     }
 }
