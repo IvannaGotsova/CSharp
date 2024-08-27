@@ -17,16 +17,20 @@
             //dateTimes.PrintDateTimes();
             //dateTimes.FormatDateTimes();
 
-            int age = 35;
-            Console.WriteLine(age);
+            //int age = 35;
+            //Console.WriteLine(age);
+            //Console.WriteLine(++age);
+            //Console.WriteLine(age++);
+            //Console.WriteLine(age);
+            //Console.WriteLine(--age);
+            //Console.WriteLine(age--);
+            //Console.WriteLine(age);
+            //Console.WriteLine();
 
-            Console.WriteLine(++age);
-            Console.WriteLine(age++);
-            Console.WriteLine(age);
+            Console.WriteLine("Number: " + 1 + 1);
+            Console.WriteLine(1 + 1 + "Number");
 
-            Console.WriteLine(--age);
-            Console.WriteLine(age--);
-            Console.WriteLine(age);
+
         }
     }
 }
