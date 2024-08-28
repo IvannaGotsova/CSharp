@@ -30,23 +30,26 @@
             //Console.WriteLine("Number: " + 1 + 1);
             //Console.WriteLine(1 + 1 + "Number");
 
-            bool isTrue = true;
-            Console.WriteLine(isTrue);
-            madeFalse();
-            Console.WriteLine(isTrue);
-            madeTrue();
-            Console.WriteLine(isTrue);
+            //bool isTrue = true;
+            //Console.WriteLine(isTrue);
+            //madeFalse();
+            //Console.WriteLine(isTrue);
+            //madeTrue();
+            //Console.WriteLine(isTrue);
 
 
-            void madeTrue()
-            {
-                isTrue = true;
-            }
+            //void madeTrue()
+            //{
+            //    isTrue = true;
+            //}
 
-            void madeFalse()
-            {
-                isTrue = false;
-            }
+            //void madeFalse()
+            //{
+            //    isTrue = false;
+            //}
+
+        
+
         }
     }
 }
