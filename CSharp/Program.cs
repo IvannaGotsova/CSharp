@@ -48,7 +48,8 @@
             //    isTrue = false;
             //}
 
-        
+            Person person = new Person();
+            person.name = "Test";
 
         }
     }
