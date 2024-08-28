@@ -10,6 +10,14 @@ namespace CSharp
     // accessible within this assembly but not from another 
     internal class Person
     {
+
+        public Person(int id, string name, int age)
+        {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+
         // accessible within this class
         private int id;
         // accessible for all classes
@@ -18,5 +26,12 @@ namespace CSharp
         protected int age;
 
         public static string status = "Regular";
+
+        public void ShowName(string name) {
+            Console.WriteLine(this.name);
+            this.name = name;
+            Console.WriteLine(name);
+        }
+
     }
 }

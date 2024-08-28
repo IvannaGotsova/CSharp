@@ -8,5 +8,8 @@ namespace CSharp
 {
     internal class Student : Person
     {
+        public Student(int id, string name, int age) : base(id, name, age)
+        {
+        }
     }
 }

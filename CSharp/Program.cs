@@ -48,11 +48,12 @@
             //    isTrue = false;
             //}
 
-            Person person = new Person();
-            person.name = "Test";
+            Person person = new Person(1, "Test Name", 33);
             Console.WriteLine(Person.status);
             Person.status = "Irregular";
             Console.WriteLine(Person.status);
+
+            person.ShowName("New Test Name");
             
 
 
