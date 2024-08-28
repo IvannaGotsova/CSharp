@@ -50,6 +50,14 @@
 
             Person person = new Person();
             person.name = "Test";
+            Console.WriteLine(Person.status);
+            Person.status = "Irregular";
+            Console.WriteLine(Person.status);
+            
+
+
+
+
 
         }
     }

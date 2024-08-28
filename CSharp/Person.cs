@@ -16,5 +16,7 @@ namespace CSharp
         public string name;
         // accessible within this class or in a class that is inherited from that class
         protected int age;
+
+        public static string status = "Regular";
     }
 }
