@@ -167,13 +167,27 @@ namespace CSharp
             //}
 
 
-            List<int> sortedList = new List<int> { 1, 11, 1, 2, 3, 4, 1, 2, 2, 1, 2, 3, 4, 5, 6, 3, 3, 3, 13, 1, 4, 14, 11, 15, 13, 16, 21, 22, 21, 6, 7, 8, 9, 10, 11, 12, 0 };
+            //List<int> sortedList = new List<int> { 1, 11, 1, 2, 3, 4, 1, 2, 2, 1, 2, 3, 4, 5, 6, 3, 3, 3, 13, 1, 4, 14, 11, 15, 13, 16, 21, 22, 21, 6, 7, 8, 9, 10, 11, 12, 0 };
 
-            sortedList.Sort();
+            //sortedList.Sort();
 
-            foreach (var item in sortedList)
+            //foreach (var item in sortedList)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            Dictionary<int, string> dictionaryExample = new Dictionary<int, string>()
             {
-                Console.WriteLine(item);
+                {0, "Zero" },
+                {1, "One" },
+                {2, "Two" },
+                {3, "Three" },
+                {4, "Four" }
+            };
+
+            foreach (KeyValuePair<int, string> keyValuePair in dictionaryExample)
+            {
+                Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
             }
         }
     }
