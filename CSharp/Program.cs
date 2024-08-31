@@ -1,6 +1,8 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Collections;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Xml.Serialization;
+
 
 namespace CSharp
 {
@@ -157,13 +159,22 @@ namespace CSharp
             //}
 
 
-            HashSet<int> numbers = new HashSet<int>() { 1, 2, 3, 3, 4, 5, 6, 6, 6, 7, 8, 9};
+            //HashSet<int> numbers = new HashSet<int>() { 1, 2, 3, 3, 4, 5, 6, 6, 6, 7, 8, 9};
 
-            foreach (var number in numbers)
+            //foreach (var number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
+
+
+            List<int> sortedList = new List<int> { 1, 11, 1, 2, 3, 4, 1, 2, 2, 1, 2, 3, 4, 5, 6, 3, 3, 3, 13, 1, 4, 14, 11, 15, 13, 16, 21, 22, 21, 6, 7, 8, 9, 10, 11, 12, 0 };
+
+            sortedList.Sort();
+
+            foreach (var item in sortedList)
             {
-                Console.WriteLine(number);
+                Console.WriteLine(item);
             }
-
         }
     }
 }
