@@ -136,26 +136,33 @@ namespace CSharp
             //    Console.WriteLine(item);
             //}
 
-            Queue<int> queueExample = new Queue<int>();
+            //Queue<int> queueExample = new Queue<int>();
 
-            queueExample.Enqueue(1);
-            queueExample.Enqueue(2);
-            queueExample.Enqueue(3);
-            queueExample.Enqueue(4);
-            queueExample.Enqueue(5);
-            queueExample.Enqueue(6);
-            queueExample.Enqueue(7);
-            queueExample.Enqueue(8);
-            queueExample.Enqueue(9);
-            queueExample.Enqueue(10);
+            //queueExample.Enqueue(1);
+            //queueExample.Enqueue(2);
+            //queueExample.Enqueue(3);
+            //queueExample.Enqueue(4);
+            //queueExample.Enqueue(5);
+            //queueExample.Enqueue(6);
+            //queueExample.Enqueue(7);
+            //queueExample.Enqueue(8);
+            //queueExample.Enqueue(9);
+            //queueExample.Enqueue(10);
 
-            queueExample.Dequeue();
+            //queueExample.Dequeue();
 
-            foreach (var item in queueExample)
+            //foreach (var item in queueExample)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            HashSet<int> numbers = new HashSet<int>() { 1, 2, 3, 3, 4, 5, 6, 6, 6, 7, 8, 9};
+
+            foreach (var number in numbers)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(number);
             }
-
 
         }
     }
