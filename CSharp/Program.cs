@@ -176,18 +176,28 @@ namespace CSharp
             //    Console.WriteLine(item);
             //}
 
-            Dictionary<int, string> dictionaryExample = new Dictionary<int, string>()
-            {
-                {0, "Zero" },
-                {1, "One" },
-                {2, "Two" },
-                {3, "Three" },
-                {4, "Four" }
-            };
+            //Dictionary<int, string> dictionaryExample = new Dictionary<int, string>()
+            //{
+            //    {0, "Zero" },
+            //    {1, "One" },
+            //    {2, "Two" },
+            //    {3, "Three" },
+            //    {4, "Four" }
+            //};
 
-            foreach (KeyValuePair<int, string> keyValuePair in dictionaryExample)
+            //foreach (KeyValuePair<int, string> keyValuePair in dictionaryExample)
+            //{
+            //    Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
+            //}
+
+            printNumbers(1, 3, 5, 7, 9, 2, 4, 6, 8);
+
+            void printNumbers(params int[] numbers)
             {
-                Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
+                foreach (var item in numbers)
+                {
+                    Console.WriteLine(item);
+                }
             }
         }
     }
