@@ -104,19 +104,37 @@ namespace CSharp
             //    Console.WriteLine();
             //}
 
-            printNumber(1);
+            //printNumber(1);
 
-            void printNumber (int number) 
+            //void printNumber (int number) 
+            //{
+            //    if (number == 22)
+            //    {
+            //        return;
+            //    }
+            //    Console.WriteLine (number + 1);
+            //    printNumber(number + 1);
+            //}
+
+            Stack<int> stackExample = new Stack<int>();
+
+            stackExample.Push(1);
+            stackExample.Push(2);
+            stackExample.Push(3);
+            stackExample.Push(4);
+            stackExample.Push(5);
+            stackExample.Push(6);
+            stackExample.Push(7);
+            stackExample.Push(8);
+            stackExample.Push(9);
+            stackExample.Push(10);
+
+            stackExample.Pop();
+
+            foreach (var item in stackExample)
             {
-                if (number == 22)
-                {
-                    return;
-                }
-                Console.WriteLine (number + 1);
-                printNumber(number + 1);
+                Console.WriteLine(item);
             }
-
-
 
         }
     }
