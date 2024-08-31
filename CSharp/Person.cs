@@ -10,6 +10,14 @@ namespace CSharp
     // accessible within this assembly but not from another 
     internal class Person
     {
+        private string privateName; 
+        public string PrivateName 
+        { 
+            get 
+            { return privateName = "Regular";  }
+            private set
+            { privateName = value;  }
+        }
 
         public Person(int id, string name, int age)
         {
