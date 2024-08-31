@@ -116,25 +116,46 @@ namespace CSharp
             //    printNumber(number + 1);
             //}
 
-            Stack<int> stackExample = new Stack<int>();
+            //Stack<int> stackExample = new Stack<int>();
 
-            stackExample.Push(1);
-            stackExample.Push(2);
-            stackExample.Push(3);
-            stackExample.Push(4);
-            stackExample.Push(5);
-            stackExample.Push(6);
-            stackExample.Push(7);
-            stackExample.Push(8);
-            stackExample.Push(9);
-            stackExample.Push(10);
+            //stackExample.Push(1);
+            //stackExample.Push(2);
+            //stackExample.Push(3);
+            //stackExample.Push(4);
+            //stackExample.Push(5);
+            //stackExample.Push(6);
+            //stackExample.Push(7);
+            //stackExample.Push(8);
+            //stackExample.Push(9);
+            //stackExample.Push(10);
 
-            stackExample.Pop();
+            //stackExample.Pop();
 
-            foreach (var item in stackExample)
+            //foreach (var item in stackExample)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            Queue<int> queueExample = new Queue<int>();
+
+            queueExample.Enqueue(1);
+            queueExample.Enqueue(2);
+            queueExample.Enqueue(3);
+            queueExample.Enqueue(4);
+            queueExample.Enqueue(5);
+            queueExample.Enqueue(6);
+            queueExample.Enqueue(7);
+            queueExample.Enqueue(8);
+            queueExample.Enqueue(9);
+            queueExample.Enqueue(10);
+
+            queueExample.Dequeue();
+
+            foreach (var item in queueExample)
             {
                 Console.WriteLine(item);
             }
+
 
         }
     }
