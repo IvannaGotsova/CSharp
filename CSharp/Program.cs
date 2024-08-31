@@ -1,4 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CSharp
 {
@@ -92,14 +94,26 @@ namespace CSharp
             //    }
             //}
 
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
-                    Console.Write(j + 1 + " ");
-                }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    for (int j = 0; j < 10; j++)
+            //    {
+            //        Console.Write(j + 1 + " ");
+            //    }
 
-                Console.WriteLine();
+            //    Console.WriteLine();
+            //}
+
+            printNumber(1);
+
+            void printNumber (int number) 
+            {
+                if (number == 22)
+                {
+                    return;
+                }
+                Console.WriteLine (number + 1);
+                printNumber(number + 1);
             }
 
 
