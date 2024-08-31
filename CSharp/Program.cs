@@ -2,6 +2,13 @@
 {
     public class Program
     {
+        private enum StatusPerson
+        {
+            Student = 1,
+            Teacher = 2,
+            Director = 3
+        }
+
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello, World!");
@@ -54,9 +61,9 @@
             //Console.WriteLine(Person.status);
 
             //person.ShowName("New Test Name");
-            
 
-
+            StatusPerson statusPerson = StatusPerson.Student;
+            Console.WriteLine(statusPerson);
 
 
 
