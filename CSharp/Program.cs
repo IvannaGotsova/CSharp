@@ -67,32 +67,40 @@ namespace CSharp
             //StatusPerson statusPerson = StatusPerson.Student;
             //Console.WriteLine(statusPerson);
 
-            int[,] multiArray = { { 1, 2, 3, }, { 4, 5, 6 }, { 7, 8, 9 } };
+            //int[,] multiArray = { { 1, 2, 3, }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-            for (int i = 0; i < multiArray.GetLength(0); i++)
+            //for (int i = 0; i < multiArray.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < multiArray.GetLength(1); j++)
+            //    {
+            //        Console.WriteLine(multiArray[i,j]);
+            //    }
+            //}
+
+            //Console.WriteLine();
+
+            //int[][] jaggedArray = new int[3][];
+
+            //for (int i = 0; i < jaggedArray.Length; i++)
+            //{
+            //    jaggedArray[i] = new int[i + 10];
+
+            //    for (int j = 0; j < jaggedArray[i].Length; j++)
+            //    {
+            //        jaggedArray[i][j] = i + j;
+            //        Console.WriteLine(jaggedArray[i][j]);
+            //    }
+            //}
+
+            for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j < multiArray.GetLength(1); j++)
+                for (int j = 0; j < 10; j++)
                 {
-                    Console.WriteLine(multiArray[i,j]);
+                    Console.Write(j + 1 + " ");
                 }
+
+                Console.WriteLine();
             }
-
-            Console.WriteLine();
-
-            int[][] jaggedArray = new int[3][];
-
-            for (int i = 0; i < jaggedArray.Length; i++)
-            {
-                jaggedArray[i] = new int[i + 10];
-
-                for (int j = 0; j < jaggedArray[i].Length; j++)
-                {
-                    jaggedArray[i][j] = i + j;
-                    Console.WriteLine(jaggedArray[i][j]);
-                }
-            }
-
-
 
 
 
