@@ -14,7 +14,7 @@ namespace CSharp
 
         public override string ToString()
         {
-            return "I am Director";
+            return "I am Student";
         }
     }
 }
