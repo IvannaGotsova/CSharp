@@ -15,6 +15,13 @@ namespace CSharp
         //    Director = 3
         //}
 
+        public struct StructExample(int one, int two)
+        {
+            public int one = one;
+            public int two = two;
+        }
+
+
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello, World!");
@@ -209,28 +216,43 @@ namespace CSharp
             //Console.WriteLine(person.name);
 
 
-            printNumbers();
+            //printNumbers();
 
-            void printNumbers(int number = 1)
-            {
-                Console.WriteLine(number);
-            }
+            //void printNumbers(int number = 1)
+            //{
+            //    Console.WriteLine(number);
+            //}
 
 
-            printNumbers2();
+            //printNumbers2();
 
-            void printNumbers2(int[] numbers = null)
-            {
-                if (numbers == null)
-                {
-                    numbers = new int[] { 1, 3, 5, 7, 9, 2, 4, 6, 8 };
-                }
+            //void printNumbers2(int[] numbers = null)
+            //{
+            //    if (numbers == null)
+            //    {
+            //        numbers = new int[] { 1, 3, 5, 7, 9, 2, 4, 6, 8 };
+            //    }
 
-                foreach (var item in numbers)
-                {
-                    Console.WriteLine(item);
-                }
-            }
+            //    foreach (var item in numbers)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+
+
+            StructExample structExample = new StructExample();
+
+            Console.WriteLine(structExample.one);
+            Console.WriteLine(structExample.two);
+
+            structExample.one = 11;
+            structExample.two = 12;
+
+
+            Console.WriteLine(structExample.one);
+            Console.WriteLine(structExample.two);
+
+
         }
     }
 }
