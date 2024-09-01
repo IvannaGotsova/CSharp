@@ -15,11 +15,11 @@ namespace CSharp
         //    Director = 3
         //}
 
-        public struct StructExample(int one, int two)
-        {
-            public int one = one;
-            public int two = two;
-        }
+        //public struct StructExample(int one, int two)
+        //{
+        //    public int one = one;
+        //    public int two = two;
+        //}
 
 
         static void Main(string[] args)
@@ -240,19 +240,27 @@ namespace CSharp
             //}
 
 
-            StructExample structExample = new StructExample();
+            //StructExample structExample = new StructExample();
 
-            Console.WriteLine(structExample.one);
-            Console.WriteLine(structExample.two);
+            //Console.WriteLine(structExample.one);
+            //Console.WriteLine(structExample.two);
 
-            structExample.one = 11;
-            structExample.two = 12;
-
-
-            Console.WriteLine(structExample.one);
-            Console.WriteLine(structExample.two);
+            //structExample.one = 11;
+            //structExample.two = 12;
 
 
+            //Console.WriteLine(structExample.one);
+            //Console.WriteLine(structExample.two);
+
+            Person person = new Person(1, "Ivan", 33);
+            Student student = new Student(1, "Ivan", 33);
+            Teacher teacher = new Teacher(1, "Ivan", 33);
+            Director director = new Director(1, "Ivan", 33);
+
+            Console.WriteLine(person.ToString());
+            Console.WriteLine(student.ToString());
+            Console.WriteLine(teacher.ToString());
+            Console.WriteLine(director.ToString());
         }
     }
 }
