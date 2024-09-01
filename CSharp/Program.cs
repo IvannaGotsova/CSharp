@@ -190,15 +190,30 @@ namespace CSharp
             //    Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
             //}
 
-            printNumbers(1, 3, 5, 7, 9, 2, 4, 6, 8);
+            //printNumbers(1, 3, 5, 7, 9, 2, 4, 6, 8);
 
-            void printNumbers(params int[] numbers)
-            {
-                foreach (var item in numbers)
-                {
-                    Console.WriteLine(item);
-                }
-            }
+            //void printNumbers(params int[] numbers)
+            //{
+            //    foreach (var item in numbers)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+
+            Person person = new Person(1, "Ivan", 33 );
+            Console.WriteLine(person.name);
+
+            Person personTwo = person;
+            personTwo.name = "Test";
+            Console.WriteLine(personTwo.name);
+
+            int one = 1;
+            int two = one;
+            two = 2;
+
+            Console.WriteLine(one);
+            Console.WriteLine(two);
+
         }
     }
 }
