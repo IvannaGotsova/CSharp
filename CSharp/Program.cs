@@ -200,20 +200,37 @@ namespace CSharp
             //    }
             //}
 
-            Person person = new Person(1, "Ivan", 33 );
-            Console.WriteLine(person.name);
+            //Person person = new Person(1, "Ivan", 33);
+            //Console.WriteLine(person.name);
 
-            Person personTwo = person;
-            personTwo.name = "Test";
-            Console.WriteLine(personTwo.name);
+            //Person personTwo = person;
+            //personTwo.name = "Test";
+            //Console.WriteLine(personTwo.name);
+            //Console.WriteLine(person.name);
 
-            int one = 1;
-            int two = one;
-            two = 2;
 
-            Console.WriteLine(one);
-            Console.WriteLine(two);
+            printNumbers();
 
+            void printNumbers(int number = 1)
+            {
+                Console.WriteLine(number);
+            }
+
+
+            printNumbers2();
+
+            void printNumbers2(int[] numbers = null)
+            {
+                if (numbers == null)
+                {
+                    numbers = new int[] { 1, 3, 5, 7, 9, 2, 4, 6, 8 };
+                }
+
+                foreach (var item in numbers)
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
     }
 }
