@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp
 {
-    internal abstract class People
+    internal abstract class People 
     {
         public abstract void abstractPeople();
 
