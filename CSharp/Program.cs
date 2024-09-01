@@ -252,15 +252,22 @@ namespace CSharp
             //Console.WriteLine(structExample.one);
             //Console.WriteLine(structExample.two);
 
-            Person person = new Person(1, "Ivan", 33);
-            Student student = new Student(1, "Ivan", 33);
-            Teacher teacher = new Teacher(1, "Ivan", 33);
-            Director director = new Director(1, "Ivan", 33);
+            //Person person = new Person(1, "Ivan", 33);
+            //Student student = new Student(1, "Ivan", 33);
+            //Teacher teacher = new Teacher(1, "Ivan", 33);
+            //Director director = new Director(1, "Ivan", 33);
 
-            Console.WriteLine(person.ToString());
-            Console.WriteLine(student.ToString());
-            Console.WriteLine(teacher.ToString());
-            Console.WriteLine(director.ToString());
+            //Console.WriteLine(person.ToString());
+            //Console.WriteLine(student.ToString());
+            //Console.WriteLine(teacher.ToString());
+            //Console.WriteLine(director.ToString());
+
+
+            Person person = new Person(1, "Ivan", 33);
+            person.noAbstractPeople();
+            person.abstractPeople();
+
+
         }
     }
 }
