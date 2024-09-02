@@ -53,7 +53,7 @@ namespace CSharp
 
         public void Write()
         {
-            Console.WriteLine("Person write");
+            Console.WriteLine("Person write");  
         }
     }
 }
