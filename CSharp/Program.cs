@@ -21,7 +21,9 @@ namespace CSharp
         //    public int two = two;
         //}
 
-
+        private delegate void MethodsOne();
+        private static Action MethodsTwo;
+        private static Func<int> MethodsThree;
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello, World!");
@@ -272,23 +274,63 @@ namespace CSharp
             //person.Read();
 
 
-            IWritable writable = new Student(1, "Ivan", 33);
-            IReadable readable = new Teacher(2, "Petar", 33);
+            //IWritable writable = new Student(1, "Ivan", 33);
+            //IReadable readable = new Teacher(2, "Petar", 33);
 
-            Console.WriteLine(writable.GetType() == typeof(Person));
-            Console.WriteLine(readable.GetType() == typeof(Person));
+            //Console.WriteLine(writable.GetType() == typeof(Person));
+            //Console.WriteLine(readable.GetType() == typeof(Person));
 
-            Console.WriteLine(writable is Person);
-            Console.WriteLine(readable is Person);
+            //Console.WriteLine(writable is Person);
+            //Console.WriteLine(readable is Person);
 
-            Person directorOne = writable as Person;
-            Person directorTwo = readable as Person;
+            //Person directorOne = writable as Person;
+            //Person directorTwo = readable as Person;
 
-            Console.WriteLine(directorOne.GetType());
-            Console.WriteLine(directorTwo.GetType());
+            //Console.WriteLine(directorOne.GetType());
+            //Console.WriteLine(directorTwo.GetType());
 
-            Console.WriteLine(directorOne is Person);
-            Console.WriteLine(directorTwo is Person);
+            //Console.WriteLine(directorOne is Person);
+            //Console.WriteLine(directorTwo is Person);
+
+
+            void oneMethod() 
+            {
+                Console.WriteLine("One method");
+            }
+
+            void twoMethod()
+            {
+                Console.WriteLine("Two method");
+            }
+
+            void threeMethod()
+            {
+                Console.WriteLine("Third method");
+            }
+
+            MethodsOne methodsOne;
+
+            methodsOne = oneMethod;
+            methodsOne += twoMethod;
+            methodsOne += threeMethod;
+
+            methodsOne();
+
+            MethodsTwo = (() =>
+            {
+                oneMethod();
+                twoMethod();
+                threeMethod();
+            });
+
+            MethodsTwo();
+
+            Func<int, int, int> MethodsThree = (int a, int b) =>
+            {
+                return a + b;
+            };
+
+            Console.WriteLine(MethodsThree(2, 2 ));
         }
     }
 }
