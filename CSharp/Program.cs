@@ -6,20 +6,26 @@ using System.Xml.Serialization;
 
 namespace CSharp
 {
-    public class Button
+    public class Input
     {
-        public event EventHandler ButtonClicked;
-        public void Clicked()
+        public event EventHandler CorrectInput;
+        public void CheckInput()
         {
-            ButtonClicked?.Invoke(this, EventArgs.Empty);
+            string inputConsole = Console.ReadLine();
+
+            if (inputConsole == "Two") 
+            {
+                CorrectInput?.Invoke(this, EventArgs.Empty);
+            }
+           
         }
     }
 
-    public class ButtonUser
+    public class InputUser
     {
         public void DoSomething(object sender, EventArgs e)
         {
-            Console.WriteLine("Button Clicked");
+            Console.WriteLine("Correct Input");
         }
     }
 
@@ -44,10 +50,10 @@ namespace CSharp
         static void Main(string[] args)
         {
 
-            Button button = new Button();
-            ButtonUser buttonUser = new ButtonUser();
-            button.ButtonClicked += buttonUser.DoSomething;
-            button.Clicked();
+            Input input = new Input();
+            InputUser buttonUser = new InputUser();
+            input.CorrectInput += buttonUser.DoSomething;
+            input.CheckInput();
 
 
             //Console.WriteLine("Hello, World!");
