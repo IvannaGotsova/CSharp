@@ -6,6 +6,23 @@ using System.Xml.Serialization;
 
 namespace CSharp
 {
+    public class Button
+    {
+        public event EventHandler ButtonClicked;
+        public void Clicked()
+        {
+            ButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
+    public class ButtonUser
+    {
+        public void DoSomething(object sender, EventArgs e)
+        {
+            Console.WriteLine("Button Clicked");
+        }
+    }
+
     public class Program
     {
         //private enum StatusPerson
@@ -21,11 +38,18 @@ namespace CSharp
         //    public int two = two;
         //}
 
-        private delegate void MethodsOne();
-        private static Action MethodsTwo;
-        private static Func<int> MethodsThree;
+        //private delegate void MethodsOne();
+        //private static Action MethodsTwo;
+        //private static Func<int> MethodsThree;
         static void Main(string[] args)
         {
+
+            Button button = new Button();
+            ButtonUser buttonUser = new ButtonUser();
+            button.ButtonClicked += buttonUser.DoSomething; 
+            button.Clicked();
+
+
             //Console.WriteLine("Hello, World!");
 
             //Console.WriteLine("-----------------------------------------------------------");
@@ -293,44 +317,46 @@ namespace CSharp
             //Console.WriteLine(directorTwo is Person);
 
 
-            void oneMethod() 
-            {
-                Console.WriteLine("One method");
-            }
+            //void oneMethod() 
+            //{
+            //    Console.WriteLine("One method");
+            //}
 
-            void twoMethod()
-            {
-                Console.WriteLine("Two method");
-            }
+            //void twoMethod()
+            //{
+            //    Console.WriteLine("Two method");
+            //}
 
-            void threeMethod()
-            {
-                Console.WriteLine("Third method");
-            }
+            //void threeMethod()
+            //{
+            //    Console.WriteLine("Third method");
+            //}
 
-            MethodsOne methodsOne;
+            //MethodsOne methodsOne;
 
-            methodsOne = oneMethod;
-            methodsOne += twoMethod;
-            methodsOne += threeMethod;
+            //methodsOne = oneMethod;
+            //methodsOne += twoMethod;
+            //methodsOne += threeMethod;
 
-            methodsOne();
+            //methodsOne();
 
-            MethodsTwo = (() =>
-            {
-                oneMethod();
-                twoMethod();
-                threeMethod();
-            });
+            //MethodsTwo = (() =>
+            //{
+            //    oneMethod();
+            //    twoMethod();
+            //    threeMethod();
+            //});
 
-            MethodsTwo();
+            //MethodsTwo();
 
-            Func<int, int, int> MethodsThree = (int a, int b) =>
-            {
-                return a + b;
-            };
+            //Func<int, int, int> MethodsThree = (int a, int b) =>
+            //{
+            //    return a + b;
+            //};
 
-            Console.WriteLine(MethodsThree(2, 2 ));
+            //Console.WriteLine(MethodsThree(2, 2 ));
+
+
         }
     }
 }
