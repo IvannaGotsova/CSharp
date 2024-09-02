@@ -263,9 +263,13 @@ namespace CSharp
             //Console.WriteLine(director.ToString());
 
 
+            //Person person = new Person(1, "Ivan", 33);
+            //person.noAbstractPeople();
+            //person.abstractPeople();
+
             Person person = new Person(1, "Ivan", 33);
-            person.noAbstractPeople();
-            person.abstractPeople();
+            person.Write();
+            person.Read();
 
 
         }
