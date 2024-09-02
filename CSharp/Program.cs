@@ -267,13 +267,28 @@ namespace CSharp
             //person.noAbstractPeople();
             //person.abstractPeople();
 
-            Person person = new Person(1, "Ivan", 33);
-            person.Write();
-            person.Read();
+            //Person person = new Person(1, "Ivan", 33);
+            //person.Write();
+            //person.Read();
 
 
+            IWritable writable = new Student(1, "Ivan", 33);
+            IReadable readable = new Teacher(2, "Petar", 33);
 
+            Console.WriteLine(writable.GetType() == typeof(Person));
+            Console.WriteLine(readable.GetType() == typeof(Person));
 
+            Console.WriteLine(writable is Person);
+            Console.WriteLine(readable is Person);
+
+            Person directorOne = writable as Person;
+            Person directorTwo = readable as Person;
+
+            Console.WriteLine(directorOne.GetType());
+            Console.WriteLine(directorTwo.GetType());
+
+            Console.WriteLine(directorOne is Person);
+            Console.WriteLine(directorTwo is Person);
         }
     }
 }
