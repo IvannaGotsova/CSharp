@@ -8,7 +8,7 @@ namespace CSharp
 {
 
     // accessible within this assembly but not from another 
-    internal class Person : People
+    internal class Person : People, IReadable, IWritable
     {
         private string privateName; 
         public string PrivateName 
@@ -44,6 +44,16 @@ namespace CSharp
         public override void abstractPeople()
         {
             Console.WriteLine("Abstract method");
+        }
+
+        public void Read()
+        {
+            Console.WriteLine("Person read");
+        }
+
+        public void Write()
+        {
+            Console.WriteLine("Person write");
         }
     }
 }
