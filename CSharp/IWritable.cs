@@ -9,5 +9,6 @@ namespace CSharp
     public interface IWritable
     {
         public void Write();
+
     }
 }
