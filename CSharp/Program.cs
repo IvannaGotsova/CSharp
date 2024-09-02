@@ -6,26 +6,29 @@ using System.Xml.Serialization;
 
 namespace CSharp
 {
-    public class Input
+    public class Number
     {
-        public event EventHandler CorrectInput;
-        public void CheckInput()
+        public event EventHandler CorrectNumber;
+        public void CheckNumber()
         {
-            string inputConsole = Console.ReadLine();
+            int number = 0;
 
-            if (inputConsole == "Two") 
+            for (int i = number; i < 100000; i++)
             {
-                CorrectInput?.Invoke(this, EventArgs.Empty);
+                if (i == 22)
+                {
+                    CorrectNumber?.Invoke(this, EventArgs.Empty);
+                }
             }
            
         }
     }
 
-    public class InputUser
+    public class RightNumber
     {
         public void DoSomething(object sender, EventArgs e)
         {
-            Console.WriteLine("Correct Input");
+            Console.WriteLine("TWENTY TWO");
         }
     }
 
@@ -50,10 +53,10 @@ namespace CSharp
         static void Main(string[] args)
         {
 
-            Input input = new Input();
-            InputUser buttonUser = new InputUser();
-            input.CorrectInput += buttonUser.DoSomething;
-            input.CheckInput();
+            Number number = new Number();
+            RightNumber rightNumber = new RightNumber();
+            number.CorrectNumber += rightNumber.DoSomething;
+            number.CheckNumber();
 
 
             //Console.WriteLine("Hello, World!");
