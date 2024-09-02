@@ -46,7 +46,8 @@ namespace CSharp
 
             Button button = new Button();
             ButtonUser buttonUser = new ButtonUser();
-            button.ButtonClicked += buttonUser.DoSomething; 
+            button.ButtonClicked += buttonUser.DoSomething;
+            button.ButtonClicked -= buttonUser.DoSomething;
             button.Clicked();
 
 
