@@ -36,6 +36,8 @@ namespace CSharp
 
         public static string status = "Regular";
 
+        public string city;
+
         public void ShowName(string name) {
             Console.WriteLine(this.name);
             this.name = name;
