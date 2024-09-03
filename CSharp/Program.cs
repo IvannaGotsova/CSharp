@@ -2,35 +2,36 @@
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Serialization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace CSharp
 {
-    public class Number
-    {
-        public event EventHandler CorrectNumber;
-        public void CheckNumber()
-        {
-            int number = 0;
+    //public class Number
+    //{
+    //    public event EventHandler CorrectNumber;
+    //    public void CheckNumber()
+    //    {
+    //        int number = 0;
 
-            for (int i = number; i < 100000; i++)
-            {
-                if (i == 22)
-                {
-                    CorrectNumber?.Invoke(this, EventArgs.Empty);
-                }
-            }
+    //        for (int i = number; i < 100000; i++)
+    //        {
+    //            if (i == 22)
+    //            {
+    //                CorrectNumber?.Invoke(this, EventArgs.Empty);
+    //            }
+    //        }
            
-        }
-    }
+    //    }
+    //}
 
-    public class RightNumber
-    {
-        public void DoSomething(object sender, EventArgs e)
-        {
-            Console.WriteLine("TWENTY TWO");
-        }
-    }
+    //public class RightNumber
+    //{
+    //    public void DoSomething(object sender, EventArgs e)
+    //    {
+    //        Console.WriteLine("TWENTY TWO");
+    //    }
+    //}
 
     public class Program
     {
@@ -50,13 +51,50 @@ namespace CSharp
         //private delegate void MethodsOne();
         //private static Action MethodsTwo;
         //private static Func<int> MethodsThree;
+
+
         static void Main(string[] args)
         {
+            Person person = new Person(1, "Ivan", 33);
+            person.city = "Sofia";
 
-            Number number = new Number();
-            RightNumber rightNumber = new RightNumber();
-            number.CorrectNumber += rightNumber.DoSomething;
-            number.CheckNumber();
+            string city = "";
+
+            switch (person.name)
+            {
+                case "Ivan" when person.city == "Plovdiv" :
+                    city = "Plovdiv";
+                    break;
+                case "Ivan" when person.city == "Sofia":
+                    city = "Sofia";
+                    break;
+                case "Ivan" when person.city == "Varna":
+                    city = "Plovdiv";
+                    break;
+                case "Ivan" when person.city == "":
+                    city = "Other";
+                    break;
+                case "" when person.city == "Plovdiv":
+                    city = "Plovdiv";
+                    break;
+                case "" when person.city == "Sofia":
+                    city = "Sofia";
+                    break;
+                case "" when person.city == "Varna":
+                    city = "Plovdiv";
+                    break;
+                case "" when person.city == "":
+                    city = "Other";
+                    break;
+            }
+
+            Console.WriteLine(person.city);
+
+
+            //Number number = new Number();
+            //RightNumber rightNumber = new RightNumber();
+            //number.CorrectNumber += rightNumber.DoSomething;
+            //number.CheckNumber();
 
 
             //Console.WriteLine("Hello, World!");
