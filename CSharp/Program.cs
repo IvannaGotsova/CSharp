@@ -2,11 +2,31 @@
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Serialization;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace CSharp
 {
+    public class StopNumber
+    {
+        public event EventHandler StopNumber;
+
+        int startNumber = 0;
+
+        public void stopNumber(int stopNumber)
+        {
+            while (startNumber != stopNumber)
+            {
+                Console.WriteLine(startNumber);
+
+                startNumber++;
+            }
+
+            StopNumber?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
     //public class Number
     //{
     //    public event EventHandler CorrectNumber;
@@ -55,41 +75,49 @@ namespace CSharp
 
         static void Main(string[] args)
         {
-            Person person = new Person(1, "Ivan", 33);
-            person.city = "Sofia";
 
-            string city = "";
 
-            switch (person.name)
-            {
-                case "Ivan" when person.city == "Plovdiv" :
-                    city = "Plovdiv";
-                    break;
-                case "Ivan" when person.city == "Sofia":
-                    city = "Sofia";
-                    break;
-                case "Ivan" when person.city == "Varna":
-                    city = "Plovdiv";
-                    break;
-                case "Ivan" when person.city == "":
-                    city = "Other";
-                    break;
-                case "" when person.city == "Plovdiv":
-                    city = "Plovdiv";
-                    break;
-                case "" when person.city == "Sofia":
-                    city = "Sofia";
-                    break;
-                case "" when person.city == "Varna":
-                    city = "Plovdiv";
-                    break;
-                case "" when person.city == "":
-                    city = "Other";
-                    break;
-            }
+            string numberToString = Console.ReadLine();
+            int number = Convert.ToInt16(numberToString);
 
-            Console.WriteLine(person.city);
+            StopNumber stopNumber = new StopNumber();
 
+
+
+            //Person person = new Person(1, "Ivan", 33);
+            //person.city = "Sofia";
+
+            //string city = "";
+
+            //switch (person.name)
+            //{
+            //    case "Ivan" when person.city == "Plovdiv" :
+            //        city = "Plovdiv";
+            //        break;
+            //    case "Ivan" when person.city == "Sofia":
+            //        city = "Sofia";
+            //        break;
+            //    case "Ivan" when person.city == "Varna":
+            //        city = "Plovdiv";
+            //        break;
+            //    case "Ivan" when person.city == "":
+            //        city = "Other";
+            //        break;
+            //    case "" when person.city == "Plovdiv":
+            //        city = "Plovdiv";
+            //        break;
+            //    case "" when person.city == "Sofia":
+            //        city = "Sofia";
+            //        break;
+            //    case "" when person.city == "Varna":
+            //        city = "Plovdiv";
+            //        break;
+            //    case "" when person.city == "":
+            //        city = "Other";
+            //        break;
+            //}
+
+            //Console.WriteLine(person.city);
 
             //Number number = new Number();
             //RightNumber rightNumber = new RightNumber();
