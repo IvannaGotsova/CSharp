@@ -8,25 +8,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CSharp
 {
-    public class StopNumber
-    {
-        public event EventHandler StopNumber;
-
-        int startNumber = 0;
-
-        public void stopNumber(int stopNumber)
-        {
-            while (startNumber != stopNumber)
-            {
-                Console.WriteLine(startNumber);
-
-                startNumber++;
-            }
-
-            StopNumber?.Invoke(this, EventArgs.Empty);
-        }
-    }
-
+    
     //public class Number
     //{
     //    public event EventHandler CorrectNumber;
@@ -76,12 +58,7 @@ namespace CSharp
         static void Main(string[] args)
         {
 
-
-            string numberToString = Console.ReadLine();
-            int number = Convert.ToInt16(numberToString);
-
-            StopNumber stopNumber = new StopNumber();
-
+            //number.CheckNumber();
 
 
             //Person person = new Person(1, "Ivan", 33);
