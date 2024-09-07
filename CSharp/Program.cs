@@ -55,33 +55,62 @@ namespace CSharp
         //private static Func<int> MethodsThree;
 
 
-        public delegate void EnterKeyPressedEventHandler(object sender, EventArgs e);
-        public static event EnterKeyPressedEventHandler EnterKeyPressed;
+        //public delegate void EnterKeyPressedEventHandler(object sender, EventArgs e);
+        //public static event EnterKeyPressedEventHandler EnterKeyPressed;
+
+        public delegate void ReachNumberEventHandler(object sender, EventArgs e, int number);
+        public static event ReachNumberEventHandler NumberReached;
 
         static void Main(string[] args)
         {
-            EnterKeyPressed += OnEnterKeyPressed;
+            NumberReached += OnNumberReached;
 
-            Console.WriteLine("Press any key!");
+            Console.WriteLine("Choose a number!");
 
-            while (true)
+            int stopNumber = int.Parse(Console.ReadLine());
+            int startNumber = 0;
+            
+            while(stopNumber >= startNumber) 
             {
-                ConsoleKeyInfo keyToCheck = Console.ReadKey(true);
-                Console.WriteLine(keyToCheck.Key);
+                Console.WriteLine(startNumber);
 
-                if (keyToCheck.Key == ConsoleKey.Enter)
+                if (stopNumber == startNumber)
                 {
-                    EnterKeyPressed?.Invoke(null, EventArgs.Empty);
+                    NumberReached?.Invoke(null, EventArgs.Empty, stopNumber);
                     break;
                 }
-                Console.WriteLine("Wrong key was pressed!");
+                
+                startNumber++;
             }
         }
 
-        private static void OnEnterKeyPressed(object sender, EventArgs e)
+        private static void OnNumberReached(object sender, EventArgs e, int number)
         {
-            Console.WriteLine("Right key was pressed!");
+            Console.WriteLine($"You reached the number {number}!");
         }
+
+        //    EnterKeyPressed += OnEnterKeyPressed;
+
+        //    Console.WriteLine("Press any key!");
+
+        //    while (true)
+        //    {
+        //        ConsoleKeyInfo keyToCheck = Console.ReadKey(true);
+        //        Console.WriteLine(keyToCheck.Key);
+
+        //        if (keyToCheck.Key == ConsoleKey.Enter)
+        //        {
+        //            EnterKeyPressed?.Invoke(null, EventArgs.Empty);
+        //            break;
+        //        }
+        //        Console.WriteLine("Wrong key was pressed!");
+        //    }
+        //}
+
+        //private static void OnEnterKeyPressed(object sender, EventArgs e)
+        //{
+        //    Console.WriteLine("Right key was pressed!");
+        //}
 
 
         //number.CheckNumber();
@@ -434,7 +463,5 @@ namespace CSharp
 
         //Console.WriteLine(MethodsThree(2, 2 ));
 
-
-    
     }
 }
