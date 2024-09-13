@@ -75,7 +75,7 @@ namespace CSharp
 
             while (counter <= 10)
             {
-                Thread.Sleep(seconds);
+                Thread.Sleep(seconds * 1000);
                 SecondsReached?.Invoke(null, EventArgs.Empty, seconds);
                 counter++;
             }
