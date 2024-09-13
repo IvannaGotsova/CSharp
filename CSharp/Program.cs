@@ -58,36 +58,62 @@ namespace CSharp
         //public delegate void EnterKeyPressedEventHandler(object sender, EventArgs e);
         //public static event EnterKeyPressedEventHandler EnterKeyPressed;
 
-        public delegate void ReachNumberEventHandler(object sender, EventArgs e, int number);
-        public static event ReachNumberEventHandler NumberReached;
+        //public delegate void ReachNumberEventHandler(object sender, EventArgs e, int number);
+        //public static event ReachNumberEventHandler NumberReached;
+
+        public delegate void ReachParticularSeconds(object sender, EventArgs e, int seconds);
+        public static event ReachParticularSeconds SecondsReached;
 
         static void Main(string[] args)
         {
-            NumberReached += OnNumberReached;
+            SecondsReached += OnSecondsReached;
 
-            Console.WriteLine("Choose a number!");
+            Console.WriteLine("Choose seconds!");
+            int seconds = int.Parse(Console.ReadLine());
 
-            int stopNumber = int.Parse(Console.ReadLine());
-            int startNumber = 0;
-            
-            while(stopNumber >= startNumber) 
+            int counter = 0;
+
+            while (counter <= 10)
             {
-                Console.WriteLine(startNumber);
-
-                if (stopNumber == startNumber)
-                {
-                    NumberReached?.Invoke(null, EventArgs.Empty, stopNumber);
-                    break;
-                }
-                
-                startNumber++;
+                Thread.Sleep(seconds);
+                SecondsReached?.Invoke(null, EventArgs.Empty, seconds);
+                counter++;
             }
+
+
         }
 
-        private static void OnNumberReached(object sender, EventArgs e, int number)
+        private static void OnSecondsReached(object sender, EventArgs e, int seconds)
         {
-            Console.WriteLine($"You reached the number {number}!");
+            Console.WriteLine($"You reached {seconds} seconds!");
         }
+
+
+        //    NumberReached += OnNumberReached;
+
+        //    Console.WriteLine("Choose a number!");
+
+        //    int stopNumber = int.Parse(Console.ReadLine());
+        //    int startNumber = 0;
+
+        //    while(stopNumber >= startNumber) 
+        //    {
+        //        Console.WriteLine(startNumber);
+
+        //        if (stopNumber == startNumber)
+        //        {
+        //            NumberReached?.Invoke(null, EventArgs.Empty, stopNumber);
+        //            break;
+        //        }
+
+        //        startNumber++;
+        //    }
+        //}
+
+        //private static void OnNumberReached(object sender, EventArgs e, int number)
+        //{
+        //    Console.WriteLine($"You reached the number {number}!");
+        //}
 
         //    EnterKeyPressed += OnEnterKeyPressed;
 
