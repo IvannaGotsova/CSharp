@@ -61,32 +61,41 @@ namespace CSharp
         //public delegate void ReachNumberEventHandler(object sender, EventArgs e, int number);
         //public static event ReachNumberEventHandler NumberReached;
 
-        public delegate void ReachParticularSeconds(object sender, EventArgs e, int seconds);
-        public static event ReachParticularSeconds SecondsReached;
+        //public delegate void ReachParticularSeconds(object sender, EventArgs e, int seconds);
+        //public static event ReachParticularSeconds SecondsReached;
+
+
+        public delegate int SumDelegateExample(int numberOne, int numberTwo);
 
         static void Main(string[] args)
         {
-            SecondsReached += OnSecondsReached;
+            //SecondsReached += OnSecondsReached;
 
-            Console.WriteLine("Choose seconds!");
-            int seconds = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Choose seconds!");
+            //int seconds = int.Parse(Console.ReadLine());
 
-            int counter = 0;
+            //int counter = 0;
 
-            while (counter <= 10)
-            {
-                Thread.Sleep(seconds * 1000);
-                SecondsReached?.Invoke(null, EventArgs.Empty, seconds);
-                counter++;
-            }
+            //while (counter <= 10)
+            //{
+            //    Thread.Sleep(seconds * 1000);
+            //    SecondsReached?.Invoke(null, EventArgs.Empty, seconds);
+            //    counter++;
+            //}
 
-
+            SumDelegateExample sumDelegateExample = SumDleegateMethod;
+            Console.WriteLine(sumDelegateExample.Invoke(1, 3));
         }
 
-        private static void OnSecondsReached(object sender, EventArgs e, int seconds)
+        static int SumDleegateMethod(int numberOne, int numberTwo)
         {
-            Console.WriteLine($"You reached {seconds} seconds!");
+            return numberOne + numberTwo;
         }
+
+        //private static void OnSecondsReached(object sender, EventArgs e, int seconds)
+        //{
+        //    Console.WriteLine($"You reached {seconds} seconds!");
+        //}
 
 
         //    NumberReached += OnNumberReached;
