@@ -65,7 +65,9 @@ namespace CSharp
         //public static event ReachParticularSeconds SecondsReached;
 
 
-        public delegate int SumDelegateExample(int numberOne, int numberTwo);
+        //public delegate int SumDelegateExample(int numberOne, int numberTwo);
+
+        public delegate string TextDelegateExample(string name);
 
         static void Main(string[] args)
         {
@@ -83,13 +85,15 @@ namespace CSharp
             //    counter++;
             //}
 
-            SumDelegateExample sumDelegateExample = SumDleegateMethod;
-            Console.WriteLine(sumDelegateExample.Invoke(1, 3));
+            TextDelegateExample textDelegateExample = TextDelegateMethod;
+            Console.WriteLine("Write your name.");
+            string name = Console.ReadLine();
+            Console.WriteLine(textDelegateExample.Invoke(name));
         }
 
-        static int SumDleegateMethod(int numberOne, int numberTwo)
+        static string TextDelegateMethod(string name)
         {
-            return numberOne + numberTwo;
+            return $"Hello {name}!";
         }
 
         //private static void OnSecondsReached(object sender, EventArgs e, int seconds)
