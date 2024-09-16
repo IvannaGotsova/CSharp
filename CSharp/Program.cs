@@ -8,7 +8,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CSharp
 {
-    
+
     //public class Number
     //{
     //    public event EventHandler CorrectNumber;
@@ -23,7 +23,7 @@ namespace CSharp
     //                CorrectNumber?.Invoke(this, EventArgs.Empty);
     //            }
     //        }
-           
+
     //    }
     //}
 
@@ -67,10 +67,20 @@ namespace CSharp
 
         //public delegate int SumDelegateExample(int numberOne, int numberTwo);
 
-        public delegate string TextDelegateExample(string name);
+        //public delegate string TextDelegateExample(string name);
 
         static void Main(string[] args)
         {
+
+            GenericsExample<string> genericsExampleString = new GenericsExample<string>();
+            genericsExampleString.genericsExampleMethod("Some string");
+
+            GenericsExample<int> genericsExampleInt = new GenericsExample<int>();
+            genericsExampleInt.genericsExampleMethod(2);
+
+            GenericsExample<bool> genericsExampleBool = new GenericsExample<bool>();
+            genericsExampleBool.genericsExampleMethod(false);
+
             //SecondsReached += OnSecondsReached;
 
             //Console.WriteLine("Choose seconds!");
@@ -85,16 +95,28 @@ namespace CSharp
             //    counter++;
             //}
 
-            TextDelegateExample textDelegateExample = TextDelegateMethod;
-            Console.WriteLine("Write your name.");
-            string name = Console.ReadLine();
-            Console.WriteLine(textDelegateExample.Invoke(name));
+            //TextDelegateExample textDelegateExample = TextDelegateMethod;
+            //Console.WriteLine("Write your name.");
+            //string name = Console.ReadLine();
+            //Console.WriteLine(textDelegateExample.Invoke(name));
         }
 
-        static string TextDelegateMethod(string name)
+        private class GenericsExample<T>
         {
-            return $"Hello {name}!";
+
+            private T genericsExampleField;
+
+            public void genericsExampleMethod(T genericsExampleField)
+            {
+                Console.WriteLine(genericsExampleField.GetType());
+            }
         }
+
+       
+        //static string TextDelegateMethod(string name)
+        //{
+        //    return $"Hello {name}!";
+        //}
 
         //private static void OnSecondsReached(object sender, EventArgs e, int seconds)
         //{
