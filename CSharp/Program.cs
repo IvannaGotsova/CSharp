@@ -71,15 +71,34 @@ namespace CSharp
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Write first number!");
+            int numberOne = int.Parse(Console.ReadLine());
 
-            GenericsExample<string> genericsExampleString = new GenericsExample<string>();
-            genericsExampleString.genericsExampleMethod("Some string");
+            Console.WriteLine("Write second number!");
+            int numberTwo = int.Parse(Console.ReadLine());
 
-            GenericsExample<int> genericsExampleInt = new GenericsExample<int>();
-            genericsExampleInt.genericsExampleMethod(2);
+            int result;
 
-            GenericsExample<bool> genericsExampleBool = new GenericsExample<bool>();
-            genericsExampleBool.genericsExampleMethod(false);
+            try 
+            {
+                result = numberOne / numberTwo;
+                Console.WriteLine($"Result is: {result}");
+
+            } catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            
+
+            //GenericsExample<string> genericsExampleString = new GenericsExample<string>();
+            //genericsExampleString.genericsExampleMethod("Some string");
+
+            //GenericsExample<int> genericsExampleInt = new GenericsExample<int>();
+            //genericsExampleInt.genericsExampleMethod(2);
+
+            //GenericsExample<bool> genericsExampleBool = new GenericsExample<bool>();
+            //genericsExampleBool.genericsExampleMethod(false);
 
             //SecondsReached += OnSecondsReached;
 
@@ -101,16 +120,16 @@ namespace CSharp
             //Console.WriteLine(textDelegateExample.Invoke(name));
         }
 
-        private class GenericsExample<T>
-        {
+        //private class GenericsExample<T>
+        //{
 
-            private T genericsExampleField;
+        //    private T genericsExampleField;
 
-            public void genericsExampleMethod(T genericsExampleField)
-            {
-                Console.WriteLine(genericsExampleField.GetType());
-            }
-        }
+        //    public void genericsExampleMethod(T genericsExampleField)
+        //    {
+        //        Console.WriteLine(genericsExampleField.GetType());
+        //    }
+        //}
 
        
         //static string TextDelegateMethod(string name)
