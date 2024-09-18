@@ -79,17 +79,24 @@ namespace CSharp
 
             int result;
 
-            try 
+            try
             {
                 result = numberOne / numberTwo;
                 Console.WriteLine($"Result is: {result}");
 
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+            finally 
+            {
+                Console.WriteLine("Finally!!!");
+            }
 
-            
+            Console.WriteLine("End of the program!");
+
+
 
             //GenericsExample<string> genericsExampleString = new GenericsExample<string>();
             //genericsExampleString.genericsExampleMethod("Some string");
