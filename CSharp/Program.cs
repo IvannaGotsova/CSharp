@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Serialization;
@@ -71,32 +72,84 @@ namespace CSharp
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Write first number!");
-            int numberOne = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Write second number!");
-            int numberTwo = int.Parse(Console.ReadLine());
-
-            int result;
-
-            try
-            {
-                result = numberOne / numberTwo;
-                Console.WriteLine($"Result is: {result}");
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally 
-            {
-                Console.WriteLine("Finally!!!");
-            }
-
-            Console.WriteLine("End of the program!");
+            char charExample = 'a';
+            int intExample = 1;
+            long longExampole = 1000000000000000000;
+            float floatExample = 1f;
+            double doubleExample = 1.1;
 
 
+           
+
+            Console.WriteLine("Float to Double");
+            double doubleExampleImplicit = floatExample;
+            Console.WriteLine(doubleExampleImplicit);
+
+            Console.WriteLine("Double to Float");
+            float floatExampleImplicit = (float)doubleExample;
+            Console.WriteLine(floatExampleImplicit);
+
+            Console.WriteLine("Char to Double");
+            double doubleExampleImplicit2 = charExample;
+            Console.WriteLine(doubleExampleImplicit2);
+
+            Console.WriteLine("Float to Char");
+            char charExampleImplicit = (char)floatExample;
+            Console.WriteLine(charExampleImplicit);
+
+            Console.WriteLine("Char to Long");
+            long longExampleImplicit = charExample;
+            Console.WriteLine(longExampleImplicit);
+
+            Console.WriteLine("Long to Char");
+            long longExampleImplicit2 = (char)floatExample;
+            Console.WriteLine(longExampleImplicit2);
+
+            Console.WriteLine("Int to Double");
+            double doubleExampleImplicit3 = intExample;
+            Console.WriteLine(doubleExampleImplicit3);
+
+            Console.WriteLine("Double to Int");
+            int intExampleImplicit = (int)doubleExample;
+            Console.WriteLine(intExampleImplicit);
+
+            Console.WriteLine("Int to String");
+            Console.WriteLine(Convert.ToString(intExample));
+
+            Console.WriteLine("Double to String");
+            Console.WriteLine(Convert.ToString(doubleExample));
+
+            Console.WriteLine("Int to Double");
+            Console.WriteLine(Convert.ToDouble(floatExample));
+
+            Console.WriteLine("Float to Int");
+            Console.WriteLine(Convert.ToInt64(floatExample));
+
+            //Console.WriteLine("Write first number!");
+            //int numberOne = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Write second number!");
+            //int numberTwo = int.Parse(Console.ReadLine());
+
+            //int result;
+
+            //try
+            //{
+            //    result = numberOne / numberTwo;
+            //    Console.WriteLine($"Result is: {result}");
+
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
+            //finally 
+            //{
+            //    Console.WriteLine("Finally!!!");
+            //}
+
+            //Console.WriteLine("End of the program!");
 
             //GenericsExample<string> genericsExampleString = new GenericsExample<string>();
             //genericsExampleString.genericsExampleMethod("Some string");
@@ -138,7 +191,7 @@ namespace CSharp
         //    }
         //}
 
-       
+
         //static string TextDelegateMethod(string name)
         //{
         //    return $"Hello {name}!";
