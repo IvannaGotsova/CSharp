@@ -70,61 +70,85 @@ namespace CSharp
 
         //public delegate string TextDelegateExample(string name);
 
+
+
+        static void Sum(int one, int two)
+        {
+            Console.WriteLine(one + two);
+        }
+
+        static void Sum(int one, int two, int three)
+        {
+            Console.WriteLine(one + two + three);
+        }
+
+        static void Sum(double one, double two)
+        {
+            Console.WriteLine(one + two);
+        }
+
         static void Main(string[] args)
         {
 
-            char charExample = 'a';
-            int intExample = 1;
-            long longExampole = 1000000000000000000;
-            float floatExample = 1f;
-            double doubleExample = 1.1;
+            int numberOne = 22;
+            int numberTwo = 44;
+            int numberThree = 55;
+            double numberFour = 2.5;
+            double numberFive = 5.5;
 
+            Sum(numberOne, numberTwo);
+            Sum(numberOne, numberTwo, numberThree);
+            Sum(numberFour, numberFive);
 
-           
+            //char charExample = 'a';
+            //int intExample = 1;
+            //long longExampole = 1000000000000000000;
+            //float floatExample = 1f;
+            //double doubleExample = 1.1;
 
-            Console.WriteLine("Float to Double");
-            double doubleExampleImplicit = floatExample;
-            Console.WriteLine(doubleExampleImplicit);
+            //Console.WriteLine("Float to Double");
+            //double doubleExampleImplicit = floatExample;
+            //Console.WriteLine(doubleExampleImplicit);
 
-            Console.WriteLine("Double to Float");
-            float floatExampleImplicit = (float)doubleExample;
-            Console.WriteLine(floatExampleImplicit);
+            //Console.WriteLine("Double to Float");
+            //float floatExampleImplicit = (float)doubleExample;
+            //Console.WriteLine(floatExampleImplicit);
 
-            Console.WriteLine("Char to Double");
-            double doubleExampleImplicit2 = charExample;
-            Console.WriteLine(doubleExampleImplicit2);
+            //Console.WriteLine("Char to Double");
+            //double doubleExampleImplicit2 = charExample;
+            //Console.WriteLine(doubleExampleImplicit2);
 
-            Console.WriteLine("Float to Char");
-            char charExampleImplicit = (char)floatExample;
-            Console.WriteLine(charExampleImplicit);
+            //Console.WriteLine("Float to Char");
+            //char charExampleImplicit = (char)floatExample;
+            //Console.WriteLine(charExampleImplicit);
 
-            Console.WriteLine("Char to Long");
-            long longExampleImplicit = charExample;
-            Console.WriteLine(longExampleImplicit);
+            //Console.WriteLine("Char to Long");
+            //long longExampleImplicit = charExample;
+            //Console.WriteLine(longExampleImplicit);
 
-            Console.WriteLine("Long to Char");
-            long longExampleImplicit2 = (char)floatExample;
-            Console.WriteLine(longExampleImplicit2);
+            //Console.WriteLine("Long to Char");
+            //long longExampleImplicit2 = (char)floatExample;
+            //Console.WriteLine(longExampleImplicit2);
 
-            Console.WriteLine("Int to Double");
-            double doubleExampleImplicit3 = intExample;
-            Console.WriteLine(doubleExampleImplicit3);
+            //Console.WriteLine("Int to Double");
+            //double doubleExampleImplicit3 = intExample;
+            //Console.WriteLine(doubleExampleImplicit3);
 
-            Console.WriteLine("Double to Int");
-            int intExampleImplicit = (int)doubleExample;
-            Console.WriteLine(intExampleImplicit);
+            //Console.WriteLine("Double to Int");
+            //int intExampleImplicit = (int)doubleExample;
+            //Console.WriteLine(intExampleImplicit);
 
-            Console.WriteLine("Int to String");
-            Console.WriteLine(Convert.ToString(intExample));
+            //Console.WriteLine("Int to String");
+            //Console.WriteLine(Convert.ToString(intExample));
 
-            Console.WriteLine("Double to String");
-            Console.WriteLine(Convert.ToString(doubleExample));
+            //Console.WriteLine("Double to String");
+            //Console.WriteLine(Convert.ToString(doubleExample));
 
-            Console.WriteLine("Int to Double");
-            Console.WriteLine(Convert.ToDouble(floatExample));
+            //Console.WriteLine("Int to Double");
+            //Console.WriteLine(Convert.ToDouble(floatExample));
 
-            Console.WriteLine("Float to Int");
-            Console.WriteLine(Convert.ToInt64(floatExample));
+            //Console.WriteLine("Float to Int");
+            //Console.WriteLine(Convert.ToInt64(floatExample));
 
             //Console.WriteLine("Write first number!");
             //int numberOne = int.Parse(Console.ReadLine());
