@@ -97,6 +97,7 @@ namespace CSharp
             double numberFive = -5.5;
 
             Console.WriteLine(Math.Abs(numberFive));
+            Console.WriteLine(Math.Pow(numberFour, Math.Abs(numberFive)));
 
             //Sum(numberOne, numberTwo);
             //Sum(numberOne, numberTwo, numberThree);
