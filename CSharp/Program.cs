@@ -112,7 +112,7 @@ namespace CSharp
             Console.WriteLine(Math.Cbrt(numberFive));
             Console.WriteLine(Math.Clamp(numberOne, numberTwo, numberThree));
             Console.WriteLine(Math.CopySign(numberFour, numberFive));
-
+            Console.WriteLine(Math.Exp(numberFive));
 
             //Sum(numberOne, numberTwo);
             //Sum(numberOne, numberTwo, numberThree);
