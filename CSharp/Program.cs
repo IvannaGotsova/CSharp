@@ -105,8 +105,8 @@ namespace CSharp
             Console.WriteLine(Math.Min(numberOne, numberTwo));
             Console.WriteLine(Math.Ceiling(numberFour));
             Console.WriteLine(Math.Floor(numberFour));
-
-
+            Console.WriteLine(Math.Sign(numberOne));
+            Console.WriteLine(Math.Sign(numberTwo));
 
             //Sum(numberOne, numberTwo);
             //Sum(numberOne, numberTwo, numberThree);
