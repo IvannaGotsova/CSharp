@@ -98,6 +98,8 @@ namespace CSharp
 
             Console.WriteLine(Math.Abs(numberFive));
             Console.WriteLine(Math.Pow(numberFour, Math.Abs(numberFive)));
+            Console.WriteLine(Math.Round(numberFour));
+            Console.WriteLine(Math.Round(numberFive));
 
             //Sum(numberOne, numberTwo);
             //Sum(numberOne, numberTwo, numberThree);
