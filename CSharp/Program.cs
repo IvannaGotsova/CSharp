@@ -103,6 +103,10 @@ namespace CSharp
             Console.WriteLine(Math.PI);
             Console.WriteLine(Math.Max(numberOne, numberTwo));
             Console.WriteLine(Math.Min(numberOne, numberTwo));
+            Console.WriteLine(Math.Ceiling(numberFour));
+
+
+
 
             //Sum(numberOne, numberTwo);
             //Sum(numberOne, numberTwo, numberThree);
