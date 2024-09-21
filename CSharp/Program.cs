@@ -92,7 +92,7 @@ namespace CSharp
 
             int numberOne = 22;
             int numberTwo = 44;
-            //int numberThree = 55;
+            int numberThree = 55;
             double numberFour = 2.5;
             double numberFive = -5.5;
 
@@ -110,7 +110,7 @@ namespace CSharp
             Console.WriteLine(Math.E);
             Console.WriteLine(Math.Tau);
             Console.WriteLine(Math.Cbrt(numberFive));
-
+            Console.WriteLine(Math.Clamp(numberOne, numberTwo, numberThree));
 
 
 
