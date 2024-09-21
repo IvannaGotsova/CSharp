@@ -94,11 +94,13 @@ namespace CSharp
             int numberTwo = 44;
             int numberThree = 55;
             double numberFour = 2.5;
-            double numberFive = 5.5;
+            double numberFive = -5.5;
 
-            Sum(numberOne, numberTwo);
-            Sum(numberOne, numberTwo, numberThree);
-            Sum(numberFour, numberFive);
+            Console.WriteLine(Math.Abs(numberFive));
+
+            //Sum(numberOne, numberTwo);
+            //Sum(numberOne, numberTwo, numberThree);
+            //Sum(numberFour, numberFive);
 
             //char charExample = 'a';
             //int intExample = 1;
