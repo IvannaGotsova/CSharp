@@ -92,7 +92,7 @@ namespace CSharp
 
             int numberOne = 22;
             int numberTwo = 44;
-            int numberThree = 55;
+            //int numberThree = 55;
             double numberFour = 2.5;
             double numberFive = -5.5;
 
@@ -101,6 +101,8 @@ namespace CSharp
             Console.WriteLine(Math.Round(numberFour));
             Console.WriteLine(Math.Round(numberFive));
             Console.WriteLine(Math.PI);
+            Console.WriteLine(Math.Max(numberOne, numberTwo));
+            Console.WriteLine(Math.Min(numberOne, numberTwo));
 
             //Sum(numberOne, numberTwo);
             //Sum(numberOne, numberTwo, numberThree);
