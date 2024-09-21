@@ -104,7 +104,7 @@ namespace CSharp
             Console.WriteLine(Math.Max(numberOne, numberTwo));
             Console.WriteLine(Math.Min(numberOne, numberTwo));
             Console.WriteLine(Math.Ceiling(numberFour));
-
+            Console.WriteLine(Math.Floor(numberFour));
 
 
 
