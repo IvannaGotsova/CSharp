@@ -5,6 +5,8 @@ using System.Security.Cryptography.X509Certificates;
 using System.Xml.Serialization;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.IO;
+using System;
 
 
 namespace CSharp
@@ -71,48 +73,70 @@ namespace CSharp
         //public delegate string TextDelegateExample(string name);
 
 
+        //static void Sum(int one, int two)
+        //{
+        //    Console.WriteLine(one + two);
+        //}
 
-        static void Sum(int one, int two)
-        {
-            Console.WriteLine(one + two);
-        }
+        //static void Sum(int one, int two, int three)
+        //{
+        //    Console.WriteLine(one + two + three);
+        //}
 
-        static void Sum(int one, int two, int three)
-        {
-            Console.WriteLine(one + two + three);
-        }
-
-        static void Sum(double one, double two)
-        {
-            Console.WriteLine(one + two);
-        }
+        //static void Sum(double one, double two)
+        //{
+        //    Console.WriteLine(one + two);
+        //}
 
         static void Main(string[] args)
         {
 
-            int numberOne = 22;
-            int numberTwo = 44;
-            int numberThree = 55;
-            double numberFour = 2.5;
-            double numberFive = -5.5;
+            Console.WriteLine("Write first number!");
+            int numberOne = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(Math.Abs(numberFive));
-            Console.WriteLine(Math.Pow(numberFour, Math.Abs(numberFive)));
-            Console.WriteLine(Math.Round(numberFour));
-            Console.WriteLine(Math.Round(numberFive));
-            Console.WriteLine(Math.PI);
-            Console.WriteLine(Math.Max(numberOne, numberTwo));
-            Console.WriteLine(Math.Min(numberOne, numberTwo));
-            Console.WriteLine(Math.Ceiling(numberFour));
-            Console.WriteLine(Math.Floor(numberFour));
-            Console.WriteLine(Math.Sign(numberOne));
-            Console.WriteLine(Math.Sign(numberTwo));
-            Console.WriteLine(Math.E);
-            Console.WriteLine(Math.Tau);
-            Console.WriteLine(Math.Cbrt(numberFive));
-            Console.WriteLine(Math.Clamp(numberOne, numberTwo, numberThree));
-            Console.WriteLine(Math.CopySign(numberFour, numberFive));
-            Console.WriteLine(Math.Exp(numberFive));
+            Console.WriteLine("Write second number!");
+            int numberTwo = int.Parse(Console.ReadLine());
+
+            int result;
+
+            try
+            {
+                result = numberOne / numberTwo;
+                Console.WriteLine($"Result is: {result}");
+
+            }
+            catch (Exception e)
+            {
+                throw new ArgumentException(System.String.Format("Number Two is 0"));
+            }
+            finally
+            {
+                Console.WriteLine("Finally!!!");
+            }
+
+            //int numberOne = 22;
+            //int numberTwo = 44;
+            //int numberThree = 55;
+            //double numberFour = 2.5;
+            //double numberFive = -5.5;
+
+            //Console.WriteLine(Math.Abs(numberFive));
+            //Console.WriteLine(Math.Pow(numberFour, Math.Abs(numberFive)));
+            //Console.WriteLine(Math.Round(numberFour));
+            //Console.WriteLine(Math.Round(numberFive));
+            //Console.WriteLine(Math.PI);
+            //Console.WriteLine(Math.Max(numberOne, numberTwo));
+            //Console.WriteLine(Math.Min(numberOne, numberTwo));
+            //Console.WriteLine(Math.Ceiling(numberFour));
+            //Console.WriteLine(Math.Floor(numberFour));
+            //Console.WriteLine(Math.Sign(numberOne));
+            //Console.WriteLine(Math.Sign(numberTwo));
+            //Console.WriteLine(Math.E);
+            //Console.WriteLine(Math.Tau);
+            //Console.WriteLine(Math.Cbrt(numberFive));
+            //Console.WriteLine(Math.Clamp(numberOne, numberTwo, numberThree));
+            //Console.WriteLine(Math.CopySign(numberFour, numberFive));
+            //Console.WriteLine(Math.Exp(numberFive));
 
             //Sum(numberOne, numberTwo);
             //Sum(numberOne, numberTwo, numberThree);
