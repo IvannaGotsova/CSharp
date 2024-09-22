@@ -107,7 +107,7 @@ namespace CSharp
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.StackTrace);
+                Console.WriteLine(e.ToString());
             }
             finally
             {
