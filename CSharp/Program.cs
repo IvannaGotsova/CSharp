@@ -107,7 +107,7 @@ namespace CSharp
             }
             catch (Exception e)
             {
-                throw new DivideByZeroException(System.String.Format("Number Two is 0"));
+                Console.WriteLine(e.Message);
             }
             finally
             {
