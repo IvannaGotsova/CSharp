@@ -107,7 +107,7 @@ namespace CSharp
             }
             catch (Exception e)
             {
-                throw new InvalidDataException();
+                throw new DivideByZeroException();
             }
             finally
             {
