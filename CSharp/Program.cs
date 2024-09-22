@@ -107,7 +107,7 @@ namespace CSharp
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.TargetSite);
+                Console.WriteLine(e.HelpLink);
             }
             finally
             {
