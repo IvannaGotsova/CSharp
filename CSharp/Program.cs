@@ -107,7 +107,7 @@ namespace CSharp
             }
             catch (Exception e)
             {
-                throw new Exception();
+                throw new Exception("Divided by zero is no allowed.");
             }
             finally
             {
