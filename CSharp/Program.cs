@@ -102,6 +102,10 @@ namespace CSharp
             Console.WriteLine(typeof(string));
             Console.WriteLine(typeof(bool));
 
+            Console.WriteLine();
+            Console.WriteLine(nameof(Person));
+
+
 
 
 
