@@ -111,6 +111,12 @@ namespace CSharp
             Console.WriteLine(person.grade);
             Console.WriteLine(person.IsGradeGood(person.grade));
 
+            Console.WriteLine();
+            Console.WriteLine(person.ShowCity());
+            person.city = "Plovdiv";
+            Console.WriteLine(person.ShowCity());
+
+
 
             //Type typeOfreflectionClass = typeof(ReflectionClass);
 
