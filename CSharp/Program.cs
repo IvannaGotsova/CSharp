@@ -99,7 +99,19 @@ namespace CSharp
 
             object instanceOfReflectionClass = constructorOfReflectionClass.Invoke(new object[] {"Reflection", 22});
 
-            
+
+            PropertyInfo stringPropertyOfReflectionClass = typeOfreflectionClass.GetProperty("ReflectionString");
+
+            stringPropertyOfReflectionClass.SetValue(instanceOfReflectionClass, "SetValueReflection");
+
+            PropertyInfo intPropertyOfReflectionClass = typeOfreflectionClass.GetProperty("ReflectionInt");
+
+            intPropertyOfReflectionClass.SetValue(instanceOfReflectionClass, 999);
+
+         
+
+
+
 
             //Console.WriteLine("Write first number!");
             //int numberOne = int.Parse(Console.ReadLine());
