@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,15 @@ namespace CSharp
         public static void GradePromotion (this Person person)
         {
             person.grade += 10;
+        }
+
+        public static string ShowCity(this Person person)
+        {
+            if (person.city == null)
+            {
+                return "No city!";
+            }
+            return person.city;
         }
     }
 }
