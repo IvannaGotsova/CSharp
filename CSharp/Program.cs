@@ -94,11 +94,22 @@ namespace CSharp
         {
 
             Person person = new Person(1, "Ivan", 33);
-            person.grade = 446;
-            int grade = person.grade;
+            person.grade = 46;
 
-            Console.WriteLine(person.IsGradeGood(grade));
+            Console.WriteLine(person.IsGradeGood(person.grade));
+            person.StatusInformation();
 
+            Console.WriteLine();
+            Console.WriteLine(person.grade);
+            Console.WriteLine(person.IsGradeGood(person.grade));
+            person.GradePromotion();
+            person.GradePromotion();
+            person.GradePromotion();
+            person.GradePromotion();
+            person.GradePromotion();
+            person.GradePromotion();
+            Console.WriteLine(person.grade);
+            Console.WriteLine(person.IsGradeGood(person.grade));
 
 
             //Type typeOfreflectionClass = typeof(ReflectionClass);
