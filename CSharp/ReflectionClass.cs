@@ -8,8 +8,8 @@ namespace CSharp
 {
     public class ReflectionClass
     {
-        public string ReflectionString;
-        public int ReflectionInt;
+        public string ReflectionString { get; set; }
+        public int ReflectionInt { get; set; }
 
         public ReflectionClass(string reflectionString, int reflectionInt)
         {
