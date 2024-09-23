@@ -107,8 +107,11 @@ namespace CSharp
             Console.WriteLine(nameof(Person.grade));
             Console.WriteLine(nameof(Person.abstractPeople));
 
-
-
+            Console.WriteLine();
+            Console.WriteLine(sizeof(int));
+            Console.WriteLine(sizeof(double));
+            Console.WriteLine(sizeof(decimal));
+            Console.WriteLine(sizeof(bool));
 
 
 
