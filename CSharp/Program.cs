@@ -93,28 +93,28 @@ namespace CSharp
         static void Main(string[] args)
         {
 
-            Type typeOfreflectionClass = typeof(ReflectionClass);
+            //Type typeOfreflectionClass = typeof(ReflectionClass);
 
-            ConstructorInfo constructorOfReflectionClass = typeOfreflectionClass.GetConstructor(new Type[] {typeof(string), typeof(int) });
+            //ConstructorInfo constructorOfReflectionClass = typeOfreflectionClass.GetConstructor(new Type[] {typeof(string), typeof(int) });
 
-            object instanceOfReflectionClass = constructorOfReflectionClass.Invoke(new object[] {"Reflection", 22});
+            //object instanceOfReflectionClass = constructorOfReflectionClass.Invoke(new object[] {"Reflection", 22});
 
 
-            PropertyInfo stringPropertyOfReflectionClass = typeOfreflectionClass.GetProperty("ReflectionString");
+            //PropertyInfo stringPropertyOfReflectionClass = typeOfreflectionClass.GetProperty("ReflectionString");
 
-            stringPropertyOfReflectionClass.SetValue(instanceOfReflectionClass, "SetValueReflection");
+            //stringPropertyOfReflectionClass.SetValue(instanceOfReflectionClass, "SetValueReflection");
 
-            PropertyInfo intPropertyOfReflectionClass = typeOfreflectionClass.GetProperty("ReflectionInt");
+            //PropertyInfo intPropertyOfReflectionClass = typeOfreflectionClass.GetProperty("ReflectionInt");
 
-            intPropertyOfReflectionClass.SetValue(instanceOfReflectionClass, 999);
+            //intPropertyOfReflectionClass.SetValue(instanceOfReflectionClass, 999);
 
-            MethodInfo methodOfString = typeOfreflectionClass.GetMethod("ReflectionMethosString");
+            //MethodInfo methodOfString = typeOfreflectionClass.GetMethod("ReflectionMethosString");
 
-            methodOfString.Invoke(instanceOfReflectionClass, new object[] { "new Reflection string" });
+            //methodOfString.Invoke(instanceOfReflectionClass, new object[] { "new Reflection string" });
 
-            MethodInfo methodOfInt = typeOfreflectionClass.GetMethod("ReflectionMethosInt");
+            //MethodInfo methodOfInt = typeOfreflectionClass.GetMethod("ReflectionMethosInt");
 
-            methodOfInt.Invoke(instanceOfReflectionClass, new object[] {9999 });
+            //methodOfInt.Invoke(instanceOfReflectionClass, new object[] {9999 });
 
 
 
