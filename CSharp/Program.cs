@@ -104,6 +104,9 @@ namespace CSharp
 
             Console.WriteLine();
             Console.WriteLine(nameof(Person));
+            Console.WriteLine(nameof(Person.grade));
+            Console.WriteLine(nameof(Person.abstractPeople));
+
 
 
 
