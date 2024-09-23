@@ -95,26 +95,40 @@ namespace CSharp
 
             Person person = new Person(1, "Ivan", 33);
             person.grade = 46;
-
-            Console.WriteLine(person.IsGradeGood(person.grade));
-            person.StatusInformation();
-
-            Console.WriteLine();
-            Console.WriteLine(person.grade);
-            Console.WriteLine(person.IsGradeGood(person.grade));
-            person.GradePromotion();
-            person.GradePromotion();
-            person.GradePromotion();
-            person.GradePromotion();
-            person.GradePromotion();
-            person.GradePromotion();
-            Console.WriteLine(person.grade);
-            Console.WriteLine(person.IsGradeGood(person.grade));
-
-            Console.WriteLine();
-            Console.WriteLine(person.ShowCity());
             person.city = "Plovdiv";
-            Console.WriteLine(person.ShowCity());
+
+            Console.WriteLine(typeof(Person));
+            Console.WriteLine(typeof(int));
+            Console.WriteLine(typeof(string));
+            Console.WriteLine(typeof(bool));
+
+
+
+
+
+
+            //Person person = new Person(1, "Ivan", 33);
+            //person.grade = 46;
+
+            //Console.WriteLine(person.IsGradeGood(person.grade));
+            //person.StatusInformation();
+
+            //Console.WriteLine();
+            //Console.WriteLine(person.grade);
+            //Console.WriteLine(person.IsGradeGood(person.grade));
+            //person.GradePromotion();
+            //person.GradePromotion();
+            //person.GradePromotion();
+            //person.GradePromotion();
+            //person.GradePromotion();
+            //person.GradePromotion();
+            //Console.WriteLine(person.grade);
+            //Console.WriteLine(person.IsGradeGood(person.grade));
+
+            //Console.WriteLine();
+            //Console.WriteLine(person.ShowCity());
+            //person.city = "Plovdiv";
+            //Console.WriteLine(person.ShowCity());
 
 
 
