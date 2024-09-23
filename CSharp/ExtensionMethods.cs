@@ -13,6 +13,17 @@ namespace CSharp
             return grade >= 100;
         }
 
+        public static void StatusInformation(this Person person)
+        {
+            if (Person.status == "Regular") 
+            {
+                Console.WriteLine(Person.status);
+            }
+        }
 
+        public static void GradePromotion (this Person person)
+        {
+            person.grade += 10;
+        }
     }
 }
