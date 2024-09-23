@@ -8,7 +8,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.IO;
 using System;
 using System.Reflection;
-
+using static CSharp.PersonExtensions;
 
 namespace CSharp
 {
@@ -92,6 +92,14 @@ namespace CSharp
 
         static void Main(string[] args)
         {
+
+            Person person = new Person(1, "Ivan", 33);
+            person.grade = 446;
+            int grade = person.grade;
+
+            Console.WriteLine(person.IsGradeGood(grade));
+
+
 
             //Type typeOfreflectionClass = typeof(ReflectionClass);
 
