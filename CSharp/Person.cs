@@ -38,6 +38,8 @@ namespace CSharp
 
         public string city;
 
+        public int grade;
+
         public void ShowName(string name) {
             Console.WriteLine(this.name);
             this.name = name;
