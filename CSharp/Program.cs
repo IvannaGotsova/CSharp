@@ -7,6 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.IO;
 using System;
+using System.Reflection;
 
 
 namespace CSharp
@@ -40,6 +41,7 @@ namespace CSharp
 
     public class Program
     {
+
         //private enum StatusPerson
         //{
         //    Student = 1,
@@ -91,28 +93,36 @@ namespace CSharp
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Write first number!");
-            int numberOne = int.Parse(Console.ReadLine());
+            Type typeOfreflectionClass = typeof(ReflectionClass);
 
-            Console.WriteLine("Write second number!");
-            int numberTwo = int.Parse(Console.ReadLine());
+            ConstructorInfo constructorOfReflectionClass = typeOfreflectionClass.GetConstructor(new Type[] {typeof(string), typeof(int) });
 
-            int result;
+            object instanceOfReflectionClass = constructorOfReflectionClass.Invoke(new object[] {"Reflection", 22});
 
-            try
-            {
-                result = numberOne / numberTwo;
-                Console.WriteLine($"Result is: {result}");
+            
 
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Divided by zero is no allowed.");
-            }
-            finally
-            {
-                Console.WriteLine("Finally!!!");
-            }
+            //Console.WriteLine("Write first number!");
+            //int numberOne = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Write second number!");
+            //int numberTwo = int.Parse(Console.ReadLine());
+
+            //int result;
+
+            //try
+            //{
+            //    result = numberOne / numberTwo;
+            //    Console.WriteLine($"Result is: {result}");
+
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new Exception("Divided by zero is no allowed.");
+            //}
+            //finally
+            //{
+            //    Console.WriteLine("Finally!!!");
+            //}
 
             //int numberOne = 22;
             //int numberTwo = 44;
@@ -670,4 +680,5 @@ namespace CSharp
         //Console.WriteLine(MethodsThree(2, 2 ));
 
     }
+
 }
