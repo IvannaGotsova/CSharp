@@ -108,8 +108,13 @@ namespace CSharp
 
             intPropertyOfReflectionClass.SetValue(instanceOfReflectionClass, 999);
 
-         
+            MethodInfo methodOfString = typeOfreflectionClass.GetMethod("ReflectionMethosString");
 
+            methodOfString.Invoke(instanceOfReflectionClass, new object[] { "new Reflection string" });
+
+            MethodInfo methodOfInt = typeOfreflectionClass.GetMethod("ReflectionMethosInt");
+
+            methodOfInt.Invoke(instanceOfReflectionClass, new object[] {9999 });
 
 
 
