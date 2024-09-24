@@ -93,27 +93,54 @@ namespace CSharp
         static void Main(string[] args)
         {
 
-            Person person = new Person(1, "Ivan", 33);
-            person.grade = 46;
-            person.city = "Plovdiv";
+            //string stringExample = "This is example string for eercises.";
 
-            Console.WriteLine(typeof(Person));
-            Console.WriteLine(typeof(int));
-            Console.WriteLine(typeof(string));
-            Console.WriteLine(typeof(bool));
+            //char[] chars = { 'f', 'g', 't', 's', 'd', 'l', 'm', 'i', 'e', 'o' };
 
-            Console.WriteLine();
-            Console.WriteLine(nameof(Person));
-            Console.WriteLine(nameof(Person.grade));
-            Console.WriteLine(nameof(Person.abstractPeople));
+            //string[] words = { "Today", "Winter", "Animal", "Key", "Saphire", "Joy" };
 
-            Console.WriteLine();
-            Console.WriteLine(sizeof(int));
-            Console.WriteLine(sizeof(double));
-            Console.WriteLine(sizeof(decimal));
-            Console.WriteLine(sizeof(bool));
+            //if (stringExample.Contains("is"))
+            //{
+            //    Console.WriteLine(true);
+            //}
+            //else 
+            //{
+            //    Console.WriteLine(false);
+            //}
+            //Console.WriteLine();
 
+            //foreach (var item in chars)
+            //{
+            //    Console.WriteLine(Convert.ToInt32(item));
+            //}
+            //Console.WriteLine();
 
+            //foreach (var item in words)
+            //{
+            //    Console.WriteLine(item.ToLower());
+            //    Console.WriteLine(item.ToUpper());
+            //    Console.WriteLine(item.Length);
+            //}
+
+            //Person person = new Person(1, "Ivan", 33);
+            //person.grade = 46;
+            //person.city = "Plovdiv";
+
+            //Console.WriteLine(typeof(Person));
+            //Console.WriteLine(typeof(int));
+            //Console.WriteLine(typeof(string));
+            //Console.WriteLine(typeof(bool));
+
+            //Console.WriteLine();
+            //Console.WriteLine(nameof(Person));
+            //Console.WriteLine(nameof(Person.grade));
+            //Console.WriteLine(nameof(Person.abstractPeople));
+
+            //Console.WriteLine();
+            //Console.WriteLine(sizeof(int));
+            //Console.WriteLine(sizeof(double));
+            //Console.WriteLine(sizeof(decimal));
+            //Console.WriteLine(sizeof(bool));
 
 
 
