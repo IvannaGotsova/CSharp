@@ -94,11 +94,21 @@ namespace CSharp
         //    Console.WriteLine(one + two);
         //}
 
+        public delegate void Message(string input);
+
         static void Main(string[] args)
         {
 
-            Third third = new Third();
-            third.Greeting();
+            Message message = Hello; 
+            message("Hello from message");               
+
+            static void Hello(string input)
+            {
+                Console.WriteLine(input);
+            }
+
+            //Third third = new Third();
+            //third.Greeting();
 
             // Value type
 
