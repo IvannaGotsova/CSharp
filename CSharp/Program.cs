@@ -12,7 +12,10 @@ using static CSharp.PersonExtensions;
 
 namespace CSharp
 {
-
+    //public class ReferenceType
+    //{
+    //    public int number;
+    //}
     //public class Number
     //{
     //    public event EventHandler CorrectNumber;
@@ -41,6 +44,7 @@ namespace CSharp
 
     public class Program
     {
+
 
         //private enum StatusPerson
         //{
@@ -92,6 +96,41 @@ namespace CSharp
 
         static void Main(string[] args)
         {
+
+            // Value type
+
+            int firstNumber = 1;
+            int secondNumber = 2;
+            int thirdNumber = secondNumber;
+
+            Console.WriteLine("First " + firstNumber);
+            Console.WriteLine("Second " + secondNumber);
+            Console.WriteLine("Third " + thirdNumber);
+
+            secondNumber = 3;
+
+            Console.WriteLine("First " + firstNumber);
+            Console.WriteLine("Second " + secondNumber);
+            Console.WriteLine("Third " + thirdNumber);
+
+            // Reference Type
+
+            //ReferenceType referenceTypeOne = new ReferenceType();
+            //ReferenceType referenceTypeTwo = new ReferenceType();
+            //ReferenceType referenceTypeThree = referenceTypeTwo;
+
+            //referenceTypeOne.number = 1;
+            //referenceTypeTwo.number = 2;
+
+            //Console.WriteLine("One " + referenceTypeOne.number);
+            //Console.WriteLine("Two " + referenceTypeTwo.number);
+            //Console.WriteLine("Three " + referenceTypeThree.number);
+
+            //referenceTypeTwo.number = 3;
+
+            //Console.WriteLine("One " + referenceTypeOne.number);
+            //Console.WriteLine("Two " + referenceTypeTwo.number);
+            //Console.WriteLine("Three " + referenceTypeThree.number);
 
             //string stringExample = "This is example string for eercises.";
 
