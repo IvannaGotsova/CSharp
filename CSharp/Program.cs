@@ -12,10 +12,10 @@ using static CSharp.PersonExtensions;
 
 namespace CSharp
 {
-    //public class ReferenceType
-    //{
-    //    public int number;
-    //}
+    public class ReferenceType
+    {
+        public int number;
+    }
     //public class Number
     //{
     //    public event EventHandler CorrectNumber;
@@ -115,22 +115,22 @@ namespace CSharp
 
             // Reference Type
 
-            //ReferenceType referenceTypeOne = new ReferenceType();
-            //ReferenceType referenceTypeTwo = new ReferenceType();
-            //ReferenceType referenceTypeThree = referenceTypeTwo;
+            ReferenceType referenceTypeOne = new ReferenceType();
+            ReferenceType referenceTypeTwo = new ReferenceType();
+            ReferenceType referenceTypeThree = referenceTypeTwo;
 
-            //referenceTypeOne.number = 1;
-            //referenceTypeTwo.number = 2;
+            referenceTypeOne.number = 1;
+            referenceTypeTwo.number = 2;
 
-            //Console.WriteLine("One " + referenceTypeOne.number);
-            //Console.WriteLine("Two " + referenceTypeTwo.number);
-            //Console.WriteLine("Three " + referenceTypeThree.number);
+            Console.WriteLine("One " + referenceTypeOne.number);
+            Console.WriteLine("Two " + referenceTypeTwo.number);
+            Console.WriteLine("Three " + referenceTypeThree.number);
 
-            //referenceTypeTwo.number = 3;
+            referenceTypeTwo.number = 3;
 
-            //Console.WriteLine("One " + referenceTypeOne.number);
-            //Console.WriteLine("Two " + referenceTypeTwo.number);
-            //Console.WriteLine("Three " + referenceTypeThree.number);
+            Console.WriteLine("One " + referenceTypeOne.number);
+            Console.WriteLine("Two " + referenceTypeTwo.number);
+            Console.WriteLine("Three " + referenceTypeThree.number);
 
             //string stringExample = "This is example string for eercises.";
 
