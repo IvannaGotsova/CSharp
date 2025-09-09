@@ -99,8 +99,18 @@ namespace CSharp
         static void Main(string[] args)
         {
 
-            Message message = Hello; 
-            message("Hello from message");               
+            //Message message = Hello; 
+            //message("Hello from message");               
+
+            HelloExtended(Hello, "Hello again");
+
+            static void HelloExtended(Message message, string input)
+            {
+                message("Hello from message");
+                Console.WriteLine(input);
+                
+            }
+
 
             static void Hello(string input)
             {
