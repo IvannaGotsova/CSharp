@@ -44,8 +44,7 @@ namespace CSharp
 
     public class Program
     {
-
-
+        
         //private enum StatusPerson
         //{
         //    Student = 1,
@@ -94,28 +93,48 @@ namespace CSharp
         //    Console.WriteLine(one + two);
         //}
 
-        public delegate void Message(string input);
-
+        //public delegate void Message(string input);
         static void Main(string[] args)
         {
+
+            //Func<string, string> greeting = s => $"Hello {s}";
+
+            //Console.WriteLine(greeting("Lambda"));
+
+            //static void ShowInput<T>(T input)
+            //{
+            //    Console.WriteLine($"Input is: {input}");
+            //}
+            
+            //ShowInput<string>("Hello!");
+            //ShowInput<int>(88);             
+            //ShowInput<double>(88.88);
+            //ShowInput<decimal>(88);
+            //ShowInput<float>(88);
+
+
+            Console.WriteLine("Press Enter");
+            Console.ReadLine(); 
+
+            Console.WriteLine("Enter was pressed");
 
             //Message message = Hello; 
             //message("Hello from message");               
 
-            HelloExtended(Hello, "Hello again");
+            //HelloExtended(Hello, "Hello again");
 
-            static void HelloExtended(Message message, string input)
-            {
-                message("Hello from message");
-                Console.WriteLine(input);
-                
-            }
+            //static void HelloExtended(Message message, string input)
+            //{
+            //    message("Hello from message");
+            //    Console.WriteLine(input);
+
+            //}
 
 
-            static void Hello(string input)
-            {
-                Console.WriteLine(input);
-            }
+            //static void Hello(string input)
+            //{
+            //    Console.WriteLine(input);
+            //}
 
             //Third third = new Third();
             //third.Greeting();
