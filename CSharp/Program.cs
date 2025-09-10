@@ -97,20 +97,20 @@ namespace CSharp
         static void Main(string[] args)
         {
 
-            //Func<string, string> greeting = s => $"Hello {s}";
+            Func<string, string> greeting = s => $"Hello {s}";
 
-            //Console.WriteLine(greeting("Lambda"));
+            Console.WriteLine(greeting("Lambda"));
 
-            static void ShowInput<T>(T input)
-            {
-                Console.WriteLine($"Input is: {input}");
-            }
+            //static void ShowInput<T>(T input)
+            //{
+            //    Console.WriteLine($"Input is: {input}");
+            //}
 
-            ShowInput<string>("Hello!");
-            ShowInput<int>(88);
-            ShowInput<double>(88.88);
-            ShowInput<decimal>(88);
-            ShowInput<float>(88);
+            //ShowInput<string>("Hello!");
+            //ShowInput<int>(88);             
+            //ShowInput<double>(88.88);
+            //ShowInput<decimal>(88);
+            //ShowInput<float>(88);
 
 
             //Console.WriteLine("Press Enter");
