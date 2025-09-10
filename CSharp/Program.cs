@@ -101,22 +101,22 @@ namespace CSharp
 
             //Console.WriteLine(greeting("Lambda"));
 
-            //static void ShowInput<T>(T input)
-            //{
-            //    Console.WriteLine($"Input is: {input}");
-            //}
-            
-            //ShowInput<string>("Hello!");
-            //ShowInput<int>(88);             
-            //ShowInput<double>(88.88);
-            //ShowInput<decimal>(88);
-            //ShowInput<float>(88);
+            static void ShowInput<T>(T input)
+            {
+                Console.WriteLine($"Input is: {input}");
+            }
+
+            ShowInput<string>("Hello!");
+            ShowInput<int>(88);
+            ShowInput<double>(88.88);
+            ShowInput<decimal>(88);
+            ShowInput<float>(88);
 
 
-            Console.WriteLine("Press Enter");
-            Console.ReadLine(); 
+            //Console.WriteLine("Press Enter");
+            //Console.ReadLine(); 
 
-            Console.WriteLine("Enter was pressed");
+            //Console.WriteLine("Enter was pressed");
 
             //Message message = Hello; 
             //message("Hello from message");               
